@@ -9,32 +9,27 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&family=Lobster+Two&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>GAUTAM | KUMAR</title>
-    <style>
-        
-    </style>
 </head>
-
 <body>
     <div class="fluid-container">
         <div class="col-md-12   div1">
             <h2>GAUTAM | KUMAR</h2>
             <hr>
-            <div class="div3 center">
-                <a href="https://github.com/GK-SVG"> <img src="{% static 'images/fb.png' %}" alt=""></a>
-                <a href=""> <img src="{% static 'images/git.png' %}" alt=""></a>
-                <a href=""> <img src="{% static 'images/link.png' %}" alt=""></a>
+            <div class="div3 center my-2">
+                <a href="https://www.facebook.com/profile.php?id=100050134031510"> <img src="{% static 'images/fb.png' %}" alt=""></a>
+                <a href="https://github.com/GK-SVG"> <img src="{% static 'images/git.png' %}" alt=""></a>
+                <a href="https://www.linkedin.com/in/gautam-kumar-3b328b18b/"> <img src="{% static 'images/link.png' %}" alt=""></a>
             </div>
             <hr>
         </div>
         <div class="container mt-3">
             <div class="row">
                 <div class="col-md-4  my-3 ">
-                    <div class="div2 mycard">
+                   <a href="/about/" style="text-decoration: none;"> <div class="div2 mycard">
                         <h3>ABOUT ME</h3>
-                    </div>
+                    </div></a>
                 </div>
                 <div class="col-md-4   my-3 ">
                     <div class="div2 mycard">
@@ -43,13 +38,14 @@
                 </div>
                 <div class="col-md-4  my-3">
                     <div class="div2 mycard">
-                        <h3>RESUME</h3>
+                        <h3>CERTIFICATES</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    {% block body %}
+    {% endblock body %}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
