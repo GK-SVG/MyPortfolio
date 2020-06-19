@@ -1,0 +1,41 @@
+{% extends 'myapp/index.html' %}
+{% block body %}
+{% load static %}
+<div class="container text-center">
+    <strong>Projects</strong>
+    {% for project in projects %}
+    <div class="col-md-12 myproject my-2" style="border: 2px solid brown;">
+        <div id="accordion">
+            <div class="card myproject">
+                <div class="card-header" id="heading{{project.id}}">
+                    <h5 class="mb-0">
+                        <button class=" collapsed " data-toggle="collapse" data-target="#collapse{{project.id}}"
+                            aria-expanded="false" aria-controls="collapse{{project.id}}" style="cursor: pointer;">
+                            <strong> {{project.categary}}</strong>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapse{{project.id}}" class="collapse" aria-labelledby="heading{{project.id}}" data-parent="#accordion">
+                    <div class="card-body">
+                        <p style="color: white;">{{project.name}} <br>
+                            {{project.discriptoin}}<br>
+                            <a href="{{project.git_link}}" style="text-decoration: none;"><img
+                                    src="{% static 'images/git.png' %}" alt=""
+                                    style="width: 1.3em;height: 1em;">Github-Link
+                            </a><br>
+                            <a href="{{project.host_link}}" style="text-decoration: none;">
+                                <img src="{% static 'images/host.png' %}" alt=""
+                                    style="width: 1.3em;height: 1em;">Server-Link
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>{% endfor %}
+</div>
+
+
+</div>
+</div>
+{% endblock body %}

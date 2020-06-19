@@ -1,0 +1,10 @@
+{% extends 'myapp/index.html' %}
+{% block body %}
+<div class="container">
+    {% for certificate in certificates %}
+    <div class="col-md-12 myproject my-2 text-center" style="border: 2px solid brown;">
+        <strong>{{certificate.org}}</strong><br>
+        <p style="color: white;">{{certificate.name}}</p>
+    </div>{% endfor %}
+</div>
+{% endblock body %}
