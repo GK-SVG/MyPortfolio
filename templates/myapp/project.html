@@ -2,7 +2,7 @@
 {% block body %}
 {% load static %}
 <div class="container text-center">
-    <strong>Projects</strong>
+    <strong>Projects ({{projects.count}})</strong>
     {% for project in projects %}
     <div class="col-md-12 myproject my-2" style="border: 2px solid brown;">
         <div id="accordion">

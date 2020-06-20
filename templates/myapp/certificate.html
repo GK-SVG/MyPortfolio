@@ -1,7 +1,7 @@
 {% extends 'myapp/index.html' %}
 {% block body %}
 <div class="container text-center">
-    <strong>Certificates</strong>
+    <strong>Certificates ({{certificates.count}})</strong>
     {% for certificate in certificates %}
     <div class="col-md-12 myproject my-2 text-center" style="border: 2px solid brown;">
     <strong>{{certificate.org}}</strong><br>
