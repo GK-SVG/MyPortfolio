@@ -46,7 +46,7 @@ img {
     box-sizing: border-box;
     text-align: center;
     font-size: 3em;
-    border: 2px solid rgb(36, 223, 11);
+    border: 2px solid brown;
     border-radius: 10px;
 }
 
@@ -116,18 +116,11 @@ h3 {
         box-sizing: border-box;
         text-align: center;
         font-size: 3rem;
-        border: 2px solid rgb(36, 223, 11);
+        border: 2px solid brown;
         border-radius: 10px;
     }
 
-    /* .mycard {
-        transition: transform .2s;
-    }
-
-    .mycard:hover {
-        box-shadow: 5px 5px 10px rgb(0, 0, 0);
-        transform: scale(1.1);
-    } */
+    
 
     h3 {
         margin-top: 25px;

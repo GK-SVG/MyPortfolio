@@ -22,3 +22,7 @@ class Certificate(models.Model):
     name=models.CharField(max_length=150)
     org=models.CharField(max_length=100)
     cer_link=models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+    

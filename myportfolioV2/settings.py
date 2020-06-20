@@ -25,7 +25,7 @@ SECRET_KEY = '0q3d_@0nvjlva%+_!^xb(4)2w(n#2r&w$mhemi1=l#c&hj)jdu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gk-engineer.herokuapp.com','localhost']
 
 
 # Application definition
@@ -126,3 +126,12 @@ STATICFILES_DIRS = (
 # managing media
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 MEDIA_URL = '/images/'
+
+import django_heroku
+django_heroku.settings(locals())
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
