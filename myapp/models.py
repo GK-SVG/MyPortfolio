@@ -21,7 +21,15 @@ class Project(models.Model):
 class Certificate(models.Model):
     name=models.CharField(max_length=150)
     org=models.CharField(max_length=100)
-    cer_link=models.CharField(max_length=200)
+    image=models.ImageField(null=True,blank=True,default='')
+
+    @property
+    def ImageURL(self):
+        try:
+            url=self.image.url
+        except:
+            url=''
+        return url
 
     def __str__(self):
         return self.name

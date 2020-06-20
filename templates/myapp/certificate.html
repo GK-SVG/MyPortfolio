@@ -1,10 +1,13 @@
 {% extends 'myapp/index.html' %}
 {% block body %}
-<div class="container">
+<div class="container text-center">
+    <strong>Certificates</strong>
     {% for certificate in certificates %}
     <div class="col-md-12 myproject my-2 text-center" style="border: 2px solid brown;">
-        <strong>{{certificate.org}}</strong><br>
-        <p style="color: white;">{{certificate.name}}</p>
+    <strong>{{certificate.org}}</strong><br>
+        <p style="color: white;">{{certificate.name}}</p> <br><br>
+        <img class="my-1"src="{{certificate.ImageURL}}" style="width:80%;height:30%;"><br>
+        
     </div>{% endfor %}
 </div>
 {% endblock body %}

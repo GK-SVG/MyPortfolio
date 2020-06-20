@@ -1,7 +1,7 @@
 {% extends 'myapp/index.html' %}
 {% block body %}
-<div class="container">
-    <div class="col-md-6  text-center me">
+<div class="container text-center">
+    <div class="col-md-6 me">
         <strong>GAUTAM | KUMAR</strong><br>
         <p >
             Hi<br>
@@ -9,8 +9,8 @@
             B.Tech,CSE(2018-2022)
         </p>
     </div>
+    <strong>SKILLS</strong>
     <div class="col-md-12 me my-4 text-center">
-        <strong>SKILLS</strong>
         <div class="row">
             {% for skill in skills %}
             <div class="col-md-3 my-1 text-center border skills">
