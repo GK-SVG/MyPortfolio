@@ -21,7 +21,7 @@ class Project(models.Model):
 class Certificate(models.Model):
     name=models.CharField(max_length=150)
     org=models.CharField(max_length=100)
-    image=models.ImageField(null=True,blank=True,default='')
+    image=models.CharField(max_length=200,null=True,blank=True,default='')
 
     @property
     def ImageURL(self):
