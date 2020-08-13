@@ -2,7 +2,7 @@
 {% block body %}
 <div class="container text-center">
     <strong>Certificates ({{certificates.count}})</strong>
-    {% for certificate in certificates %}
+    {% for certificate in certificates.reverse %}
     <div class="col-md-12 myproject my-2 text-center" style="border: 2px solid brown;">
     <strong>{{certificate.org}}</strong><br>
         <p style="color: white;">{{certificate.name}}</p> <br><br>
