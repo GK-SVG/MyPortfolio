@@ -8,11 +8,7 @@ def home(request):
 
 def about(request):
     skills=Skill.objects.all()
-    dict_data={'skills':skills}
-    print(dict_data)
-    r=json.dumps(dict_data)
-    print(r)
-    return  JsonResponse(r)
+    return  render(request,'myapp/about.html',{'skills':skills})
 
 def project(request):
     projects=Project.objects.all()
