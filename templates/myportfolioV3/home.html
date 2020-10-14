@@ -1,0 +1,21 @@
+{% extends 'myportfolioV3/base.html' %}
+{% load static %}
+{% block homeactive %}active {% endblock homeactive%}
+{% block content %}
+<div class="mt-5">
+    <div class="text-center">
+        <img class="mt-5" src="{% static 'myportfolioV3/images/1st.jpeg'%}" style="width: 200px; height: 200px;" alt="">
+    </div>
+    <div class="mt-5 text-white mx-5 text-justify">
+        <h1 class="font-wegit-bold" style="font-family: 'Sansita Swashed', cursive;">Hello,</h1>
+        <p style="font-family: 'Sansita Swashed', cursive; color: rgb(214, 218, 33);">
+            I am <b style="color: cornsilk;"> Gautam </b>.I pursuing my Batchler Degree in Computer field From MITRC,Alwar,Rajsthan.
+            B.Tech,CSE(2018-2022).
+        </p>
+    </div>
+    <div class="text-center">
+        <a href="" class="btn btn-outline-warning my-3 mr-5">Hire Me</a>
+        <a href="" class="btn btn-outline-info my-3 mr-5">Contact Me</a>
+    </div>
+</div>
+{% endblock content %}
