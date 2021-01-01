@@ -33,4 +33,7 @@ class Certificate(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+
+class MyCV(models.Model):
+    mycv = models.FileField(upload_to="mycv")

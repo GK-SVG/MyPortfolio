@@ -6,3 +6,4 @@ from .models import *
 admin.site.register(Skill)
 admin.site.register(Project)
 admin.site.register(Certificate)
+admin.site.register(MyCV)

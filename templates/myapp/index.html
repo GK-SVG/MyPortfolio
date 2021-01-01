@@ -17,22 +17,17 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <title>GAUTAM | KUMAR</title>
-    <style>
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: white;
-            color: white;
-            text-align: center;
-            color: black;
-        }
-    </style>
+    
 </head>
 
 <body>
     <div class="fluid-container">
+        <div class="mt-4">
+            <a class="btn btn-xl btn-cv" href="{{mycv.mycv.url}}" download style="text-decoration: none; color:white;">
+              <i class="fas fa-download mr-2"></i>
+              <b>Download My CV</b>
+            </a>
+          </div>
         <div class="row justify-content-md-center">
             <div class="col-md-12">
                 <h2 class="text-center" style="color: white;">GAUTAM | KUMAR</h2>
