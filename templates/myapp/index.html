@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,76 +17,130 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <title>GAUTAM | KUMAR</title>
-    
+
 </head>
 
 <body>
-    <div class="fluid-container">
-        <div class="mt-4">
-            <a class="btn btn-xl btn-cv" href="{{mycv.mycv.url}}" download style="text-decoration: none; color:white;">
-              <i class="fas fa-download mr-2"></i>
-              <b>Download My CV</b>
-            </a>
-          </div>
+    <div class="icon-bar mt-4 ml-3">
+        <a href="https://www.facebook.com/profile.php?id=100050134031510" class="facebook"><i
+                class="fa fa-facebook fa-lg"></i></a>
+        <a href="https://twitter.com/GautamK41526845" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/GK-SVG" class="github"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/gautam-kumar-3b328b18b/" class="linkedin"><i
+                class="fa fa-linkedin"></i></a>
+    </div>
+    <div style="float: right;">
+        <a class="btn btn-xl btn-cv" href="{{mycv.mycv.url}}" download style="text-decoration: none; color:white;">
+            <i class="fas fa-download mr-2"></i>
+            <b>Download My CV</b>
+        </a>
+    </div>
+    <div class="container" style="margin-top:10%;">
         <div class="row justify-content-md-center">
             <div class="col-md-12">
                 <h2 class="text-center" style="color: white;">GAUTAM | KUMAR</h2>
             </div>
-            <div class="col-md-3 col-sm-12 col-12 my-2">
-                <div class="card" style="background-color: black;">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-4 p-1">
-                                <a href="https://www.facebook.com/profile.php?id=100050134031510" target="_blank"> <img
-                                        src="{% static 'images/fb.png' %}" alt=""></a></div>
-                            <div class="col-md-4 col-sm-4 col-4 p-1">
-                                <a href="https://github.com/GK-SVG" target="_blank"> <img
-                                        src="{% static 'images/git.png' %}" alt=""></a></div>
-                            <div class="col-md-4 col-sm-4 col-4 p-1">
-                                <a href="https://www.linkedin.com/in/gautam-kumar-3b328b18b/" target="_blank"> <img
-                                        src="{% static 'images/link.png' %}" alt=""></a></div>
+
+            <div class="container mt-3">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-3  col-sm-12 col-12 my-3 mr-2">
+                        <div class="card w-100 h-100 mycard">
+                            <div class="card-body text-center ">
+                                <a href="#About" style="text-decoration: none; color:black;">
+                                    <h3>ABOUT ME</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3  col-sm-12 col-12 my-3 mr-2">
+                        <div class="card w-100 h-100 mycard">
+                            <div class="card-body text-center ">
+                                <a href="#Projects" style="text-decoration: none; color:black;">
+                                    <h3>PROJECTS</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-12 my-3 mr-2">
+                        <div class="card w-100 h-100 mycard">
+                            <div class="card-body text-center">
+                                <a href="#Certificate" style="text-decoration: none; color:black;">
+                                    <h3>CERTIFICATES</h3>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container mt-3">
-            <div class="row justify-content-md-center">
-                <div class="col-md-3  col-sm-12 col-12 my-3 mr-2">
-                    <div class="card w-100 h-100 mycard">
-                        <div class="card-body text-center ">
-                            <a href="/about/" style="text-decoration: none; color:black;">
-                                <h3>ABOUT ME</h3>
-                            </a>
-                        </div>
+
+        <div class=" text-center mt-4" id="About">
+            <div class="col-md-9 col-sm-12 col-12 mb-4 me" id="">
+                <strong>GAUTAM | KUMAR</strong><br>
+                <p>
+                    Hi<br>
+                    I am Gautam.I pursuing my Batchler Degree in Computer field From MITRC,Alwar,Rajsthan.
+                    B.Tech,CSE(2018-2022)
+                </p>
+            </div>
+            <strong>SKILLS</strong>
+            <div class="col-md-12 me mt-4 text-center">
+                <div class="row">
+                    {% for skill in skills %}
+                    <div class="col-md-3 mt-1 text-center border skills">
+                        <strong>{{skill.name}}</strong><br>
+                        {{skill.level}}
                     </div>
-                </div>
-                <div class="col-md-3  col-sm-12 col-12 my-3 mr-2">
-                    <div class="card w-100 h-100 mycard">
-                        <div class="card-body text-center ">
-                            <a href="/project/" style="text-decoration: none; color:black;">
-                                <h3>PROJECTS</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12 col-12 my-3 mr-2">
-                    <div class="card w-100 h-100 mycard">
-                        <div class="card-body text-center">
-                            <a href="/certificate/" style="text-decoration: none; color:black;">
-                                <h3>CERTIFICATES</h3>
-                            </a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
+        </div>
+        <div class=" text-center mt-4" id="Projects">
+            <strong>Projects ({{projects.count}})</strong>
+            {% for project in projects %}
+            <div class="col-md-12 myproject mt-4" style="border: 2px solid brown;">
+                <div id="accordion">
+                    <div class="card myproject">
+                        <div class="card-header" id="heading{{project.id}}">
+                            <h5 class="mb-0">
+                                <button class="collapsed" data-toggle="collapse" data-target="#collapse{{project.id}}"
+                                    aria-expanded="false" aria-controls="collapse{{project.id}}"
+                                    style="cursor: pointer;">
+                                    <strong>{{project.categary}}</strong>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse{{project.id}}" class="collapse" aria-labelledby="heading{{project.id}}"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                <p style="color: white;">{{project.name}} <br>
+                                    {{project.discriptoin}}<br>
+                                    <a href="{{project.git_link}}" style="text-decoration: none;" target="_blank"><img
+                                            src="{% static 'images/git.png' %}" alt=""
+                                            style="width: 1.3em;height: 1em;">Github-Link
+                                    </a><br>
+                                    <a href="{{project.host_link}}" style="text-decoration: none;" target="_blank">
+                                        <img src="{% static 'images/host.png' %}" alt=""
+                                            style="width: 1.3em;height: 1em;">Server-Link
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>{% endfor %}
+        </div>
+        <div class=" text-center" id="Certificate">
+            <strong>Certificates ({{certificates.count}})</strong>
+            {% for certificate in certificates.reverse %}
+            <div class="col-md-12 myproject my-2 text-center" style="border: 2px solid brown;">
+                <strong>{{certificate.org}}</strong><br>
+                <p style="color: white;">{{certificate.name}}</p> <br><br>
+                <img class="my-1" src="{{certificate.image}}" style="width:80%;height:30%;"><br>
+
+            </div>{% endfor %}
         </div>
     </div>
-    {% block body %}
-    {% endblock body %}
-    <!-- <footer class="footer">
-        <span  style="color: black;"><i class="fas fa-phone-lg"></span></i><p>9116417016</p>
-    </footer> -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://kit.fontawesome.com/d24f94013c.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
