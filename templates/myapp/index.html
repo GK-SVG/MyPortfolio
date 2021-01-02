@@ -22,13 +22,13 @@
 
 <body>
     <div class="icon-bar mt-4 ml-3">
-        <a href="https://www.facebook.com/profile.php?id=100050134031510" class="facebook"><i
+        <a href="https://www.facebook.com/profile.php?id=100050134031510" class="facebook" target="_blank"><i
                 class="fa fa-facebook fa-lg"></i></a>
-        <a href="https://twitter.com/GautamK41526845" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="https://github.com/GK-SVG" class="github"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/gautam-kumar-3b328b18b/" class="linkedin"><i
+        <a href="https://twitter.com/GautamK41526845" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/GK-SVG" class="github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/gautam-kumar-3b328b18b/" class="linkedin" target="_blank"><i
                 class="fa fa-linkedin"></i></a>
-                <a class="btn" href="{{mycv.mycv.url}}" download style="text-decoration: none; color:white;">
+                <a class="btn mt-3" href="{{mycv.mycv.url}}" download style="text-decoration: none; color:white;">
                     <i class="fas fa-download mr-2"></i>
                     <b>Download My CV</b>
                 </a>
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class=" text-center mt-4" id="Projects">
+        <div class=" text-center my-4" id="Projects">
             <strong>Projects ({{projects.count}})</strong>
             {% for project in projects %}
             <div class="col-md-12 myproject mt-4" style="border: 2px solid brown;">
@@ -101,7 +101,7 @@
                     <div class="card myproject">
                         <div class="card-header" id="heading{{project.id}}">
                             <h5 class="mb-0">
-                                <button class="collapsed" data-toggle="collapse" data-target="#collapse{{project.id}}"
+                                <button class="btn collapsed" data-toggle="collapse" data-target="#collapse{{project.id}}"
                                     aria-expanded="false" aria-controls="collapse{{project.id}}"
                                     style="cursor: pointer;">
                                     <strong>{{project.categary}}</strong>
@@ -128,7 +128,7 @@
                 </div>
             </div>{% endfor %}
         </div>
-        <div class=" text-center" id="Certificate">
+        <div class=" text-center mt-4" id="Certificate">
             <strong>Certificates ({{certificates.count}})</strong>
             {% for certificate in certificates.reverse %}
             <div class="col-md-12 myproject my-2 text-center" style="border: 2px solid brown;">
@@ -139,6 +139,8 @@
             </div>{% endfor %}
         </div>
     </div>
+    <footer class="text-center" style="background-color: white;"><b style="color: black;">Call--+91 9116417016
+    &nbsp&nbsp Gmail-- gk32239@gmail.com</b></footer>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://kit.fontawesome.com/d24f94013c.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
