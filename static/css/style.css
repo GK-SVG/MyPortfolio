@@ -24,7 +24,7 @@ img{
     padding: 16px;
     transition: all 0.3s ease;
     color: white;
-    font-size: 10vw;
+    font-size: 2vw;
   }
   
   .icon-bar a:hover {
@@ -119,6 +119,20 @@ body {
 }
 
 .myproject{
-   background-color: black;
-   width: 100%;
+  background-color: black;
+  width: 100%;
+}
+
+.skills{
+  margin: 0 auto;
+  height: 120px;
+  background-color: black;
+  color: white;
+}
+
+.me {
+  margin: 0 auto;
+  color: black;
+  background-color: white;
+  border: 2px solid tomato;
 }
